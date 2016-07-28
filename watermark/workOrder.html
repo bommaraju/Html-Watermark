@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<style>
+    .text-line {
+        background-color: transparent;
+        color:            #333;
+        outline:          none;
+        outline-style:    none;
+        outline-offset:   0;
+        border-top:       none;
+        border-left:      none;
+        border-right:     none;
+        border-bottom:    solid #333 1px;
+        /*padding: 3px 10px;*/
+    }
+
+    .tdfirst {
+        width: 40%
+    }
+
+    .tdthird {
+        width: 30%
+    }
+
+    span {
+        font-size:   small;
+        font-weight: bolder;
+
+    }
+
+    .table td {
+        border-top: none !important;
+    }
+
+    #bgtext_left {
+        position:  absolute;
+        color:     lightgrey;
+        opacity:   0.5;
+        font-size: 40px;
+        transform: rotate(320deg);
+        top:       500px;
+        left:      400px;
+    }
+
+    #bgtext_right {
+        position:  absolute;
+        color:     lightgrey;
+        opacity:   0.5;
+        font-size: 40px;
+        transform: rotate(320deg);
+        top:       200px;
+        left:      800px;
+    }
+
+    #watermark_down {
+        position:       fixed;
+        width:          100%;
+        opacity:        0.1;
+        height:         100%;
+        z-index:        99999;
+        background:     url('npa.jpg') center no-repeat;
+        pointer-events: none;
+    }
+
+    #watermark_right {
+        position:       fixed;
+        width:          100%;
+        height:         100%;
+        top:            350px;
+        left:           550px;
+        opacity:        0.1;
+        z-index:        99999;
+        background:     url('npa.jpg') center no-repeat;
+        pointer-events: none;
+    }
+
+     #watermark_center {
+        position:       fixed;
+        width:          100%;
+        height:         100%;
+        top:            150px;
+        right:           60px;
+        opacity:        0.1;
+        z-index:        99999;
+        background:     url('npa.jpg') center no-repeat;
+        pointer-events: none;
+    }
+
+    #watermark_left {
+        position:       fixed;
+        width:          100%;
+        height:         100%;
+        top:            20px;
+        right:           360px;
+        opacity:        0.1;
+        z-index:        99999;
+        background:     url('npa.jpg') center no-repeat;
+        pointer-events: none;
+    }
+
+</style>
+<body>
+<div class="container">
+    <p id="bgtext_left">DO NOT COPY</p>
+    <p id="bgtext_right">DO NOT COPY</p>
+    <p id="watermark_down"></p>
+    <p id="watermark_right"></p>
+    <p id="watermark_center"></p>
+    <p id="watermark_left"></p>
+
+    <table class="table">
+        <tr>
+            <td>
+                <img src="npa.png" alt="LOGO" align="left" />
+            </td>
+            <td>
+                <h1 align="center" style="color:red" colspan="3">UPPF FUEL DELIVERY NOTE</h1>
+            </td>
+            <td align="center" style="padding-top: 50px;">
+                <span>Serial No: <input type="text" value="" class="text-line" /></span>
+            </td>
+        </tr>
+    </table>
+    <table class="table">
+        <tr>
+            <td class="tdfirst">
+                <span><input type="text" value="" class="text-line" /></span>
+            </td>
+            <td></td>
+            <td class="tdthird">
+                <span>Transporter's name:<input type="text" value="" class="text-line" /></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>Customer name:<input type="text" value="" class="text-line" /></span>
+            </td>
+            <td></td>
+            <td>
+                <span>Transporter's phone no<input type="text" value="" class="text-line" /></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>Delivery Point:<input type="text" value="" class="text-line" /></span>
+            </td>
+            <td></td>
+            <td>
+                <span>Driver's name:<input type="text" value="" class="text-line" /></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>Volume:<input type="text" value="" class="text-line" /></span>
+            </td>
+            <td></td>
+            <td>
+                <span>Drivers Phone No:<input type="text" value="" class="text-line" /></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>Region:<input type="text" value="" class="text-line" /></span>
+            </td>
+            <td>
+                <span>Zonal depot:<input type="text" value="" class="text-line" /></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>Type of product:<input type="text" value="" class="text-line" /></span>
+            </td>
+            <td>
+                <span>Vehicle No:</span><input type="text" value="" class="text-line" /></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>Invoice No.:<input type="text" value="" class="text-line" /></span>
+            </td>
+            <td>
+                <span> Waybill No.:<input type="text" value="" class="text-line" /></span>
+            </td>
+            <td>
+                <span>Truck capacity:<input type="text" value="" class="text-line" /></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>Order No.:<input type="text" value="" class="text-line" /></span>
+            </td>
+            <td>
+                <span>Compartment 1:</span>
+                <input type="text" value="" class="text-line" /></span>
+            </td>
+            <td>
+                <span>Compartment 6:</span>
+                <input type="text" value="" class="text-line" /></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>Loading depot:<input type="text" value="" class="text-line" /></span>
+            </td>
+            <td>
+                <span>Compartment 2:</span>
+                <input type="text" value="" class="text-line" /></span>
+            </td>
+            <td>
+                <span>Compartment 7:</span><input type="text" value="" class="text-line" /></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>Supplying BDC:<input type="text" value="" class="text-line" /></span>
+            </td>
+            <td>
+                <span>Compartment 3:</span><input type="text" value="" class="text-line" /></span>
+            </td>
+            <td>
+                <span>Compartment 8:</span>
+                <input type="text" value="" class="text-line" /></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>Date of issue:<input type="text" value="" class="text-line" /></span>
+            </td>
+            <td>
+                <span>Compartment 4:</span><input type="text" value="" class="text-line" /></span>
+            </td>
+            <td>
+                <span>Compartment 9:</span>
+                <input type="text" value="" class="text-line" /></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>Type of delivery:<input type="text" value="" class="text-line" /></span>
+            </td>
+            <td>
+                <span>Compartment 5:</span><input type="text" value="" class="text-line" /></span>
+            </td>
+            <td>
+                <span>Compartment 10:</span><input type="text" value="" class="text-line" /></span>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>
+                <span>UPPF Officers Phone No:</span><input type="text" value="" class="text-line" /></span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <span>UPPF Officer's Signature and stamp:</span><input type="text" value="" class="text-line" /></span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <span>Name of UPPF Officer</span> No:<input type="text" value="" class="text-line" /></span>
+            </td>
+            <td>
+            </td>
+            <td>
+                <span>Driver's Signature:</span><input type="text" value="" class="text-line" /></span>
+            </td>
+        </tr>
+    </table>
+
+</div>
+
+</body>
+</html>
+
